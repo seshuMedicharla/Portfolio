@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Gradient Background */
+body {
+  background: linear-gradient(135deg,#1f4037,#99f2c8);
+  transition: 0.4s;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.profile-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(0px);}
+}
+
+/* Content */
+.container {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Skills */
+.skill-box {
+  margin: 15px 0;
+}
+
+.skill-bar {
+  background: #ddd;
+  height: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 12px;
+  color: white;
+  line-height: 18px;
+}
+
+/* Colors */
+.html {width:90%; background:#e34c26;}
+.css {width:85%; background:#2965f1;}
+.java {width:80%; background:#f89820;}
+.git {width:88%; background:#2ecc71;}
+
+/* Reveal Effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+.dark-mode .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .profile-card {
+  background: rgba(0,0,0,0.4);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px) {
+  .container {
+    width: 90%;
+  }
+}
